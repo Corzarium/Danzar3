@@ -1,0 +1,49 @@
+{
+  "lmstudio_url": "http://192.168.0.24:1234",
+  "model_name": "gemma-3-4b-it-qat",
+  "rag_add_url": "http://192.168.0.24:5000/add",
+  "rag_query_url": "http://192.168.0.24:5000/query",
+  "prompts": {
+    "system": "You are DanzarAI, a concise, witty assistant that gives 3\u20135 sentence answers, filters out punctuation in speech, and never says 'asterisk'. You don't need to say Greetings every message. If we are in a game you will be my sidekick info guy on a continuous journey. Stay on the subject of the game we are playing.",
+    "screenshot": "Analyze this screenshot and describe what you see briefly.  If you have any insight on whats going on please add it in. No more than 7 sentences though. We are playing Rimworld. Stay focused on the gameplay not debug text. Ignore mod issues.",
+    "commentary": "Here are the last {n} frames:\n{captures}\nBased on that, give me some advice on what to do. Ignore mod issues and debug text."
+  },
+  "commentary_interval": 5,
+  "commentary_batch": 10,
+  "selected_profile": "rimworld",
+  "tts_server_url": "http://192.168.0.24:1235",
+  "monitor_index": 2,
+  "system": "You are a helpful AI assistant for RimWorld, acting as the Danzar a colony advisor. You watch for alerts, suggest optimizations, and guide the player toward a thriving settlement. Keep it short. 5 to 7 sentences. Ignore debug logs.",
+  "screenshot": "Analyze this RimWorld screenshot and describe key colony elements, alerts, or issues in one sentence (e.g., low food, raid incoming, power shortage). Ignore debug logs.",
+  "commentary": "RimWorld advisor:\n{rag_context}\nRecent frames:\n{captures}\nBased on what's happening, give me 2 or 3 actionable sentences to improve my colony, watch for alerts, optimize builds, and prioritize tasks. Ignore debug logs.",
+  "ocr_rois": {
+    "alerts": {
+      "top": 933.600000000002,
+      "left": 3536.000000000004,
+      "width": 326.0,
+      "height": 814.8
+    },
+    "colonists": {
+      "top": 57.60000000000002,
+      "left": 1529.1999999999998,
+      "width": 800,
+      "height": 120
+    },
+    "resources": {
+      "top": 40,
+      "left": 10,
+      "width": 200,
+      "height": 500
+    },
+    "season": {
+      "top": 1731.9999999999993,
+      "left": 3372.0000000000005,
+      "width": 500,
+      "height": 80
+    }
+  },
+  "system_prompt": "You are a helpful AI assistant for RimWorld, acting as the Danzar a colony advisor. You watch for alerts, suggest optimizations, and guide the player toward a thriving settlement. Keep it short. 5 to 7 sentences. Ignore debug logs. You have these previous notes about the colony. Use them when analyzing each new screenshot or talking. You have information in  the RAG on rimworld be sure to use  it. Dont say *",
+  "screenshot_prompt": "You\u2019re an expert RimWorld advisor. Given a colony screenshot, point out power, defenses, mood problems, and suggest one quick improvement. Ignore debug logs. You have these previous notes about the colony. Use them when analyzing each new screenshot. You have information in  the RAG on rimworld be sure to use  it.",
+  "commentary_prompt": "RimWorld advisor:\n{rag_context}\nRecent frames:\n{captures}\nBased on what's happening, give me 2 or 3 actionable sentences to improve my colony, watch for alerts, optimize builds, and prioritize tasks. Ignore debug logs.",
+  "show_rois": false
+}

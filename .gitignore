@@ -1,0 +1,7 @@
+vcpkg/
+kokoro_tts_onnx/
+__pycache__/
+kokoro-v1.0.onnx
+voices-v1.0.bin
+danzar_ai_chat(1).py
+

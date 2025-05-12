@@ -1,0 +1,5 @@
+{
+  "system":     "You are an AI assistant giving concise commentary.",
+  "screenshot": "Describe this screenshot briefly (no more than 2 sentences).",
+  "commentary": "Here are the last {n} frames:\n{captures}\nGive me a 2-sentence commentary."
+}
